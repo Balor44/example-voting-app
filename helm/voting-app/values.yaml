@@ -1,0 +1,15 @@
+image:
+  repository: ghcr.io/balor44
+  tag: "c387d9bdf7938acd3ab139db38bbbfd5a5d881e6"
+  pullPolicy: IfNotPresent
+replicas:
+  vote: 2
+  result: 1
+  worker: 1
+nodePorts:
+  vote: 31000
+  result: 31001
+redis:
+  image: redis:alpine
+db:
+  image: postgres:15-alpine
