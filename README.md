@@ -2,7 +2,7 @@
 
 A fork of [dockersamples/example-voting-app](https://github.com/dockersamples/example-voting-app) taken from code to automatic delivery: hardened container images, a CI pipeline that tests, scans, builds and pushes them, and a Helm chart with a tested rollback.
 
-Author: <your name>
+Author: NWafor Obinna
 
 ## Status
 
@@ -142,7 +142,7 @@ Workflow: `.github/workflows/ci.yml`. It runs on every push to `main` and on pul
 2. **build-scan-push**, for vote, result and worker in parallel:
    - builds the image,
    - scans it with Trivy and fails the build on any fixable CRITICAL finding,
-   - on `main`, pushes it to GitHub Container Registry as `ghcr.io/<your-github-username>/<service>:<commit SHA>`.
+   - on `main`, pushes it to GitHub Container Registry as `ghcr.io/Balor44/<service>:<commit SHA>`.
 
 Secrets: none are stored. The pipeline logs in to GHCR with GitHub's built in `GITHUB_TOKEN`. A deploy job will need a kubeconfig stored as a GitHub secret once a cluster is available.
 
